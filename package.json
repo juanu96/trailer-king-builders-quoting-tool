@@ -1,0 +1,46 @@
+{
+  "name": "rwp-plugin",
+  "version": "0.0.1",
+  "description": "React Wordpress Plugin",
+  "main": "index.js",
+  "author": "Gustavo Gomez",
+  "license": "GPL-3.0+",
+  "dependencies": {
+    "@ant-design/icons": "^4.7.0",
+    "@apollo/client": "^3.5.5",
+    "@craco/craco": "^6.2.0",
+    "@react-pdf/renderer": "^2.0.21",
+    "antd": "^4.17.2",
+    "bootstrap": "^4.6.0",
+    "craco-plugin-scoped-css": "^1.1.1",
+    "node-sass": "^6.0.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "4.0.3",
+    "reactstrap": "^8.9.0"
+  },
+  "scripts": {
+    "dev": "craco start",
+    "prod": "craco build && npm run removeHTML && npm run removeJSON && npm run removeTXT",
+    "removeHTML": "rimraf ./dist/*.html",
+    "removeJSON": "rimraf ./dist/*.json",
+    "removeTXT": "rimraf ./dist/*.txt"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
